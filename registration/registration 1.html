@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+ <html lang="en"> 
+    <title>
+        Library Management System-Registration
+    </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:  'Open Sans', sans-serif;
+        }
+        body{
+            background-color: rgb(164,0,230);
+            background: linear-gradient(90deg,rgb(164,0,230,1)0%,rgb(255,59,59,1)100%);
+        }
+        .box{
+            background-color: rgb(220, 171, 253);
+            width: 70%;
+            margin: 30px,auto;
+            padding: 20px;
+            border-radius: 0,5rem;
+            border: rgb(255,255,255) solid 3px;
+            box-shadow: 5px,5px,10px #888888;
+        }
+        .box h2{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            margin: 10px auto 20px auto;
+        }
+        .box form{
+            display: grid;
+            margin: 10px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1.5fr 0.01fr;
+            grid-template-areas: "firstname email" "lastname type"
+            "contact payment" " address empty" "submit submit";
+            grid-gap: 15px;
+        }
+        .box form label{
+            font-weight: bold;
+            font-size: 14pt;
+        }
+        .box form input,
+        .box form textarea,
+        .box form select{
+            margin: 5px 0;
+            font-size: 12pt;
+            padding: 5px 5px 5px 20px;
+            border-radius: 0,2 rem;
+            border: 2px solid #819094;
+        }
+        .box form .radio{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack:justify ;
+            justify-content: space-between;
+            width: 65%;
+        }
+        
+    </style><head> 
+     <meta charset="UTF-8" /> 
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+     <title>Library Registration</title> 
+     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> 
+     <link rel="stylesheet" href="style/style.css" /> 
+ </head> 
+  
+ <body> 
+     <div class="box"> 
+         <center> 
+             <h2>Enter User Informations</h2> 
+         </center> 
+  
+         <form action="submit.php" method="POST" id="form"> 
+             <div class="firstname"> 
+                 <label for="firstname">Fisrt Name</label><br /> 
+                 <input type="text" name="firstname" class="firstname" id="firstname" placeholder="Type first name here" /> 
+                 <small></small> 
+             </div> 
+ <div class="lastname"> 
+                    <label for="lastname">Last Name</label><br /> 
+                    <input type="text" name="lastname" class="lastname" id="lastname" placeholder="Type last name here" /> 
+                    <small></small> 
+                </div> 
+     
+                <div class="contact"> 
+                    <label for="contact">Contact Number</label><br /> 
+                    <input type="text" name="contact" class="contact" id="contact" placeholder="Type number here" /> 
+     
+                    <small id="contact-error"></small> 
+     
+                </div> 
+     
+                <div class="address"> 
+                    <label for="adress">Address</label><br /> 
+                    <textarea name="adress" class="address" id="address" placeholder="Type user Address here"></textarea> 
+                    <div id="address-error"></div> 
+                    <small></small> 
+                </div> 
+     
+                <div class="email"> 
+                    <label for="email">Email Address</label><br /> 
+                    <input type="email" name="email" class="email" id="email" placeholder="Type email address here" /> 
+    <small></small> 
+            </div> 
+ 
+            <div class="type"> 
+                <label for="type" id="test">User Type</label><br /> 
+                <div class="radio" class="type" id="type"> 
+                    <div class="radio-block"> 
+                        <input type="radio" name="type" id="radio-school" value="school" /> 
+                        <label for="school" class="radiotext">School</label> 
+                    </div> 
+                    <div class="radio-block"> 
+                        <input type="radio" name="type" id="radio-university" value="university" /> 
+                        <label for="university" class="radiotext">University</label> 
+                    </div> 
+                    <div class="radio-block"> 
+                        <input type="radio" name="type" id="radio-employee" value="employee" /> 
+                        <label for="employee" class="radiotext">Employee</label> 
+                    </div> 
+                </div> 
+                <small id="type-error"></small> 
+            </div> 
+<div class="payment"> 
+                    <label for="payment">Payment Method</label><br /> 
+                    <select name="payment" class="payment" id="paymentt"> 
+                        <option value="select-payment" selected>Select Payment Method</option> 
+                        <option value="Full Payment" id="full-payment">Full Payment</option> 
+                        <option value="Hallf Payment" id="hallf-payment">Half Payment</option> 
+                    </select> 
+                    <small id="payment-error"></small> 
+                </div> 
+     
+                <div class="submit"> 
+                    <input type="submit" value="Submit" class="button"></input> 
+                </div> 
+            </form> 
+        </div> 
+     
+        <script src="script/script.js "></script> 
+     
+    </body> 
+     
+    </html>
+
